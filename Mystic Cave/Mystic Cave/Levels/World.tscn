@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Actors/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Tiles/Tileset_Prototype32x32.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.7727, 15.8129 )
+
+[node name="World" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 151.402, 244.587 )
+
+[node name="Floor(Prototype)" type="StaticBody2D" parent="."]
+position = Vector2( 35.3846, 546.488 )
+scale = Vector2( 25, 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floor(Prototype)"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor(Prototype)"]
+shape = SubResource( 1 )
+
+[node name="Floor(Prototype)2" type="StaticBody2D" parent="."]
+position = Vector2( 1041.37, 547.302 )
+scale = Vector2( 25, 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floor(Prototype)2"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor(Prototype)2"]
+shape = SubResource( 1 )
+
+[node name="Floor(Prototype)3" type="StaticBody2D" parent="."]
+position = Vector2( 528.625, 198.234 )
+scale = Vector2( 10, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floor(Prototype)3"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor(Prototype)3"]
+shape = SubResource( 1 )
